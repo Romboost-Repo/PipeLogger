@@ -121,12 +121,14 @@ class logsformatter:
 
             blob = bucket.blob(filename)
             blob.upload_from_string(logs, content_type='application/json')
-            logging.info(f'✔ Uploaded log file {
-                         filename} to bucket {self.bucket_name}')
+            logging.info(
+            f'✔ Uploaded log file {filename} to bucket {self.bucket_name}'
+            )
             return True
         except Exception as e:
-            logging.error(f'017:Error uploading JSON file {
-                          filename} to bucket {self.bucket_name}: {e}')
+            logging.error(
+            f'017: Error uploading JSON file {filename} to bucket {self.bucket_name}: {e}'
+            )
             return False
 
     def generate_the_logs(self, execution_status, msg, start_timer, logs_details):
