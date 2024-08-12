@@ -1,5 +1,5 @@
 # pipelogger/__init__.py
 
-from .pipelogger import pipelogger
+from .pipelogger import logsformatter
 
-__all__ = ['pipelogger']
+__all__ = ['logsformatter']
